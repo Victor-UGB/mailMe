@@ -1,0 +1,11 @@
+textarea {
+    min-height: 400px;
+}
+
+.mail-read > div{
+    background-color: gray;
+}
+
+.mail-unread > div{
+    background-color: white;
+}
