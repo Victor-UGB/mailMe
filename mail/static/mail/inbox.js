@@ -30,7 +30,7 @@ function show_mail_list(mailbox){
   const mailboxContainer = document.createElement('div');
 
   mailboxContainer.id = 'mailBoxListContainer';
-  mailboxContainer.innerHTML = `<h1>These are your ${mailbox} mails</h1>`
+  mailboxContainer.innerHTML = `<h1 class="mailbox-subtitle">These are your ${mailbox} mails</h1>`
   
 
   document.querySelector('#emails-view').append(mailboxContainer)
@@ -46,10 +46,10 @@ function show_mail_list(mailbox){
       const emailDiv = document.createElement('div');
       emailDiv.className = email['read'] ? "mail-read" : "mail-unread";
       emailDiv.id = "emailDiv"
-      emailDiv.innerHTML = `<div class="" style="display: flex; flex-wrap: wrap; border: 1px solid gray; cursor: pointer; margin-top: 1rem;">
-      <h5>To: ${email.recipients}</h5>
-      <h5>Subject: ${email.subject}</h5>
-      <h5>Timestamp: ${email.timestamp}</h5>
+      emailDiv.innerHTML = `<div class="mail-list" >
+      <h5> <span class="entry-span">To:</span> ${email.recipients}</h5>
+      <h5> <span class="entry-span">Subject:</span> ${email.subject}</h5>
+      <h5>  <span class="entry-span">Timestamp:</span> ${email.timestamp}</h5>
       </div>`;
       emailDiv.addEventListener('click', function(){
         open_mail(email.id)
@@ -73,7 +73,7 @@ function load_mailbox(mailbox) {
   document.querySelector('#compose-view').style.display = 'none';
 
   // Show the mailbox name
-  document.querySelector('#emails-view').innerHTML = `<h3>${mailbox.charAt(0).toUpperCase() + mailbox.slice(1)}</h3>`;
+  document.querySelector('#emails-view').innerHTML = `<h3 class="mailbox-name">${mailbox.charAt(0).toUpperCase() + mailbox.slice(1)}</h3>`;
 
   //Show the list of mails in mailbox
   show_mail_list(mailbox)
@@ -155,8 +155,8 @@ function show_mail_details(id){
     <p>
     ${mail.body}
     </p>
-    <button class="archive_button"></button>
-    <button class="reply_button">Reply</button>
+    <button class="archive_button secondary-btn"></button>
+    <button class="reply_button primary-btn">Reply</button>
     </div>
     `
     mail_archive_button = document.querySelector(".archive_button")
