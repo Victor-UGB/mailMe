@@ -1,0 +1,87 @@
+textarea {
+    min-height: 400px;
+}
+
+.mail-read > div{
+    background-color: #f9f9f9;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.mail-unread > div{
+    background-color: white;
+}
+.body-container {
+    width: 100% !important;
+}
+.title-bar{
+    padding: 1rem;
+}
+.app-name{
+    font-size: 1.8rem;
+    font-style: italic;
+    font-weight: 800;
+    text-decoration: underline;
+    color: #4f18a7;
+    text-align: center;
+}
+.mailbox-body{
+    padding: 1rem 0rem;
+    color: #58555a;
+}
+.mailbox-user{
+    font-size: 1rem;
+    font-weight: 800;
+    color: #4f18a7bf;
+}
+.mailbox-subtitle{
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+.mail-list{
+    display: flex; 
+    flex-wrap: wrap; 
+    border: 1px solid #f9f9f9; 
+    cursor: pointer; 
+    margin-top: 1rem;
+}
+.mailbox-name{
+    font-weight: 800;
+    color: #4f18a764;
+}
+#mailBoxListContainer{
+    padding: 2rem 0rem;
+}
+.entry-span{
+    font-weight: 800;
+    padding-inline: 1rem .2rem;
+}
+.primary-btn{
+    margin-top: 1rem;
+    display: flex;
+    width: 100%;
+    background-color: #4f18a7;
+    border: 1px solid #4f18a7;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-radius: 5px;
+    color: #f9f9f9;
+}
+.secondary-btn{
+    margin-top: 1rem;
+    display: flex;
+    width: 100%;
+    background-color: transparent;
+    border: 1px solid #4f18a7;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-radius: 5px;
+    color: #4f18a7;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+    .body-container{
+        width: 722px !important;
+    }
+}
